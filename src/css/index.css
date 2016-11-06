@@ -1,0 +1,99 @@
+html {}
+
+body {
+    
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.jpg") no-repeat center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #999;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer a {
+    color: #D3D6D6;
+    font-weight: 100;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: #D3D6D6;
+}
+
+a:visited {
+    color: #D3D6D6;
+}
+
+.play-button {
+    width: 5em;
+}
+
+.pause-button {
+    width: 5em;
+}
+
+.footer-links {
+    text-align: center;
+}
+
+.title-section {
+    color: #D3D6D6;
+    text-align: center;
+    margin-top: 10em;
+}
+
+.title-section h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 10em;
+}
+
+.master-control {
+    margin-top: 15em;
+    text-align: center;
+}
+
+#master-play-button {
+    display: inline-block;
+}
+
+.sound-board {
+    text-align: center;
+    padding-bottom: 10em;
+}
+
+.sound-board h2 {
+    color: #D3D6D6;
+    font-weight: 100;
+}
+
+.audio-block {
+    display: inline-block;
+    margin-left: 4em;
+    margin-right: 4em;
+    
+}
+
+/* Not sure if I shold put this here or in nouislider.css */
+.slider {
+    margin:0 auto;
+    margin-top: 1em;
+    width: 80px;
+}
+
+#title-underline {
+    height: 1px;
+    background-color: #d9d9d9;
+    width: 200px;
+}
+
+#title-note {
+    font-weight: 100;
+    font-size: 1.5em;
+}

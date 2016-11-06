@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'>
+    <title>Kozy</title>
+    <link href="https://bootswatch.com/sandstone/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
+    <link href="css/nouislider.css" rel="stylesheet">
+    <link href="css/index.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="title-section">
+        <h1 id="title">Kozy</h1>
+        <hr id="title-underline">
+        <p id="title-note">Work | Study | Focus</p>
+    </div>
+    <div class="master-control">
+        <!--<button id="master-control-button">Play/Pause</button>-->
+        <!--<input type="image" src="img/play.png" name="saveForm" class="btTxt submit" id="saveForm" />-->
+    </div>
+    <div class="sound-board">
+        <div id="sb-row1">
+            <span class="audio-block">
+                <img class="play-button" src="img/play.png">
+                <div class="slider" id="rain-slider"></div>
+                <h2>Rain</h2>
+                <audio class="audio-file" id="rain" src="audio/rain.m4a" loop></audio>         
+            </span>
+            <span class="audio-block">
+                <img class="play-button" src="img/play.png">
+                <div class="slider" id="fire-slider"></div>
+                <h2>Fire</h2>
+                <audio class="audio-file" id="fire" loop>
+                    <source src="audio/fire.m4a" type="audio/mp4">
+                </audio>
+            </span>
+            <span class="audio-block">
+                <img class="play-button" src="img/play.png">
+                <div class="slider" id="waves-slider"></div>
+                <h2>Waves</h2>
+                <audio class ="audio-file" id="waves" loop>
+                    <source src="audio/waves.m4a" type="audio/mp4">
+                </audio>
+            </span>
+            <span class="audio-block">
+                <img class="play-button" src="img/play.png">
+                <div class="slider" id="cafe-slider"></div>
+                <h2>Cafe</h2>
+                <audio class ="audio-file" id="cafe" loop>
+                    <source src="audio/cafe.m4a" type="audio/mp4">
+                </audio>
+            </span>
+        </div>
+    </div>
+    <div class="footer">
+        <a target="_blank" href="https://kozy-741a0.firebaseapp.com/sources.html">Audio Sources</a>
+    </div>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyB4VfSNdZNfxMsIQtiNGbCeABfkojzeVGY",
+        authDomain: "kozy-741a0.firebaseapp.com",
+        databaseURL: "https://kozy-741a0.firebaseio.com",
+        storageBucket: "kozy-741a0.appspot.com",
+        messagingSenderId: "956185114959"
+    };
+    firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>
