@@ -1,21 +1,6 @@
 var audioList = document.getElementById("sb-row1").querySelectorAll(".audio-file"); // Grab all audio files in row 1 of sound board
 var playButtonList = document.getElementById("sb-row1").querySelectorAll(".play-button"); 
 var sliderList = document.getElementById("sb-row1").querySelectorAll(".slider");
-//var masterControl = document.getElementById("master-control-button");
-//var audioNoise = true; // Initialize all audio as off
-
-function fixTransitions(audioList) {
-    for (var i = 0; i < audioList.length; i++) {
-        // Can specify a point at which to replay the audio, to reduce transition interruption.
-        audioList[i].addEventListener('timeupdate', function() {
-            var buffer = 2;
-            if (this.currentTime > this.duration - buffer) {
-                this.currentTime = 2;
-                this.play();
-            }
-        }, false);
-    }
-}
 
 //-----------------------Button stuff----------------------------
 
@@ -68,30 +53,31 @@ function unHighlightPauseButton() {
     this.src = "./img/pause.png";
 }
 
-//TODO: toggle play
+
+// Probably a better way of doing this
 function play() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
+    var button = this.parentNode.getElementsByClassName("play-button")[0];
     audio.play();
-    this.src = "./img/pause.png";
-    // Remove old event listeners
-    this.parentNode.getElementsByClassName("play-button")[0].className = "pause-button";
-    this.parentNode.getElementsByClassName("pause-button")[0].removeEventListener("mouseover", highlightPlayButton, false);
-    this.parentNode.getElementsByClassName("pause-button")[0].removeEventListener("mouseout", unHighlightPlayButton, false);
-    this.parentNode.getElementsByClassName("pause-button")[0].removeEventListener("click", play, false);
-    enablePauseButtons(this.parentNode.getElementsByClassName("pause-button")); // Enable the list of pause buttons Note: More efficient to only enable the current button?
+    this.src = "./img/pause.png"; // Swap to pause image
+    button.className = "pause-button";
+    button.removeEventListener("mouseover", highlightPlayButton, false); // Remove old event listeners
+    button.removeEventListener("mouseout", unHighlightPlayButton, false);
+    button.removeEventListener("click", play, false);
+    enablePauseButtons(this.parentNode.getElementsByClassName("pause-button")); // Enable listeners for the new pause button
 }
 
-//TODO: toggle play/pause
+// Probably a better way of doing this
 function pause() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
+    var button = this.parentNode.getElementsByClassName("pause-button")[0];
     audio.pause();
-    this.src = "./img/play.png";
-    this.parentNode.getElementsByClassName("pause-button")[0].className = "play-button";
-    // Remove old event listeners
-    this.parentNode.getElementsByClassName("play-button")[0].removeEventListener("mouseover", highlightPauseButton, false);
-    this.parentNode.getElementsByClassName("play-button")[0].removeEventListener("mouseout", unHighlightPauseButton, false);
-    this.parentNode.getElementsByClassName("play-button")[0].removeEventListener("click", pause, false);
-    enablePlayButtons(this.parentNode.getElementsByClassName("play-button"));
+    this.src = "./img/play.png"; // Swap to play image
+    button.className = "play-button";
+    button.removeEventListener("mouseover", highlightPauseButton, false); // Remove old event listeners
+    button.removeEventListener("mouseout", unHighlightPauseButton, false);
+    button.removeEventListener("click", pause, false);
+    enablePlayButtons(this.parentNode.getElementsByClassName("play-button")); // Enable listeners for the new play button
 
 }
 
@@ -117,7 +103,5 @@ function bindValues(slider) {
     });
 }
 
-//masterControl.addEventListener("click", toggleSounds);
-enablePlayButtons(playButtonList);
-enableSliders(sliderList);
-fixTransitions(audioList);
+enablePlayButtons(playButtonList); // Initialize the play buttons
+enableSliders(sliderList); // Initialize the sliders
