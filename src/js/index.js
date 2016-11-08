@@ -1,6 +1,6 @@
-var audioList = document.getElementById("sb-row1").querySelectorAll(".audio-file"); // Grab all audio files in row 1 of sound board
-var playButtonList = document.getElementById("sb-row1").querySelectorAll(".play-button"); 
-var sliderList = document.getElementById("sb-row1").querySelectorAll(".slider");
+var audioList = document.querySelectorAll(".audio-file"); // Grab all audio elements
+var playButtonList = document.querySelectorAll(".play-button"); //Grab all play buttons
+var sliderList = document.querySelectorAll(".slider"); // Grab all sliders
 
 //-----------------------Button stuff----------------------------
 
