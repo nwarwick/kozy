@@ -95,7 +95,7 @@ function enableSliders(sliderList) {
     for (var i = 0; i < sliderList.length; i++) {
         var slider = sliderList[i];
         noUiSlider.create(slider, {
-            start: 0,
+            start: .5,
             range: {
                 'min': 0,
                 'max': 1
