@@ -62,7 +62,6 @@ function unHighlightPauseButton() {
     this.src = "./img/pause.png";
 }
 
-
 // Probably a better way of doing this
 function play() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
@@ -112,12 +111,14 @@ function bindValues(slider) {
     });
 }
 
+
 preloadImages(
-    "img/handle.png",
-    "img/pause.png",
+    "img/handle.png", // Preload the images for better responsiveness
+    "img/pause.png", // Better than loading images upon event triggers e.g. on mouseover
     "img/play.png",
     "img/pause-filled.png",
     "img/play-filled.png" 
 );
 enablePlayButtons(playButtonList); // Initialize the play buttons
 enableSliders(sliderList); // Initialize the sliders
+
