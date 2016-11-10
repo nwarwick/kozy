@@ -66,7 +66,10 @@ function unHighlightPauseButton() {
 function play() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
     var button = this.parentNode.getElementsByClassName("play-button")[0];
-    audio.play();
+    //audio.play();
+    setTimeout(function() { // Use timeout to fix bug in chrome where play request gets interrupted by pause
+        audio.play();
+    }, 150);
     this.src = "./img/pause.png"; // Swap to pause image
     button.className = "pause-button";
     button.removeEventListener("mouseover", highlightPlayButton, false); // Remove old event listeners
@@ -117,8 +120,7 @@ preloadImages(
     "img/pause.png", // Better than loading images upon event triggers e.g. on mouseover
     "img/play.png",
     "img/pause-filled.png",
-    "img/play-filled.png" 
+    "img/play-filled.png"
 );
 enablePlayButtons(playButtonList); // Initialize the play buttons
 enableSliders(sliderList); // Initialize the sliders
-
