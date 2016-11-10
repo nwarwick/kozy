@@ -19,18 +19,19 @@ a:visited {
 }
 
 .audio-sources {
-	margin-top: 20em;
+	margin-top: 15em;
+	margin-bottom: 10em; 
 	text-align: center;
 }
 
 .audio-sources a {
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: 100;
 	color: #D3D6D6;
 }
 
 #title {
 	font-weight: 100;
-	font-size: 5em;
+	font-size: 4em;
 	color: #D3D6D6;
 }

@@ -8,7 +8,7 @@ body {
 }
 
 .footer {
-    position: fixed;
+    margin-top: 7em;
     bottom: 0;
     width: 100%;
     color: #999;
@@ -45,7 +45,7 @@ a:visited {
 .title-section {
     color: #D3D6D6;
     text-align: center;
-    margin-top: 10em;
+    margin-top: 5em;
 }
 
 .title-section h1 {
@@ -65,6 +65,7 @@ a:visited {
 
 .sound-board {
     text-align: center;
+    margin-top: 15em;
     padding-bottom: 10em;
 }
 
