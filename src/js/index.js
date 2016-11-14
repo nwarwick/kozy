@@ -32,19 +32,6 @@ function enablePauseButtons(pauseButtonList) {
     }
 }
 
-//TODO: Create master volume and mute control
-function toggleSounds() {
-    // If audioNoise is true, mute all sounds
-    if (audioNoise) {
-        for (var i = 0; i < audioList.length; i++) {
-            // If audio is playing, pause it
-            if (!audioList.paused) {
-                audioList[i].pause;
-            }
-        }
-    }
-}
-
 function highlightPlayButton() {
     this.src = "./img/play-filled.png";
 }
@@ -67,7 +54,7 @@ function play() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
     var button = this.parentNode.getElementsByClassName("play-button")[0];
     //audio.play();
-    setTimeout(function() { // Use timeout to fix bug in chrome where play request gets interrupted by pause
+    setTimeout(function() { // Use timeout to fix bug in chrome where play request gets interrupted by pause (not sure if it works, found on Stackoverflow)
         audio.play();
     }, 150);
     this.src = "./img/pause.png"; // Swap to pause image
@@ -114,7 +101,6 @@ function bindValues(slider) {
     });
 }
 
-
 preloadImages(
     "img/handle.png", // Preload the images for better responsiveness
     "img/pause.png", // Better than loading images upon event triggers e.g. on mouseover
@@ -122,5 +108,6 @@ preloadImages(
     "img/pause-filled.png",
     "img/play-filled.png"
 );
+
 enablePlayButtons(playButtonList); // Initialize the play buttons
 enableSliders(sliderList); // Initialize the sliders
