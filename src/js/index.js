@@ -53,10 +53,7 @@ function unHighlightPauseButton() {
 function play() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
     var button = this.parentNode.getElementsByClassName("play-button")[0];
-    //audio.play();
-    setTimeout(function() { // Use timeout to fix bug in chrome where play request gets interrupted by pause (not sure if it works, found on Stackoverflow)
-        audio.play();
-    }, 150);
+    audio.play();
     this.src = "./img/pause.png"; // Swap to pause image
     button.className = "pause-button";
     button.removeEventListener("mouseover", highlightPlayButton, false); // Remove old event listeners
