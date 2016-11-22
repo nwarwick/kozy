@@ -1,19 +1,17 @@
 html {}
 
 body {
-    
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.jpg") no-repeat center fixed;
     background-size: cover;
     height: 100%;
 }
 
 .footer {
-    margin-top: 7em;
     bottom: 0;
     width: 100%;
     color: #999;
     text-align: center;
-    padding: 1rem;
+    position: absolute;
 }
 
 .footer a {
@@ -31,11 +29,11 @@ a:visited {
 }
 
 .play-button {
-    width: 5em;
+    width: 3.5em;
 }
 
 .pause-button {
-    width: 5em;
+    width: 3.5em;
 }
 
 .footer-links {
@@ -45,7 +43,7 @@ a:visited {
 .title-section {
     color: #D3D6D6;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 3em;
 }
 
 .title-section h1 {
@@ -54,23 +52,15 @@ a:visited {
     font-size: 10em;
 }
 
-.master-control {
-    margin-top: 15em;
-    text-align: center;
-}
-
-#master-play-button {
-    display: inline-block;
-}
-
 .sound-board {
     text-align: center;
     margin-top: 15em;
-    padding-bottom: 10em;
+    width: 100%;
 }
 
 .sound-board h2 {
     color: #D3D6D6;
+    font-size: 1.5em;
     font-weight: 100;
 }
 
@@ -78,14 +68,15 @@ a:visited {
     display: inline-block;
     margin-left: 4em;
     margin-right: 4em;
-    
 }
 
+
 /* Not sure if I shold put this here or in nouislider.css */
+
 .slider {
-    margin:0 auto;
+    margin: 0 auto;
     margin-top: 1em;
-    width: 80px;
+    width: 70px;
 }
 
 #title-underline {
@@ -106,3 +97,52 @@ a:visited {
     font-weight: 100;
     font-size: 1.5em;
 }
+
+@media screen and (max-width: 1115px) {
+
+    .sound-board {
+        margin-top: 10em;
+        width: 738px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+@media screen and (max-width: 1115px)  and (max-height: 795px) {
+
+    .sound-board {
+        margin-top: 10em;
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 5em;
+    }
+}
+
+@media screen and (max-width: 715px) {
+
+    .sound-board {
+        margin-top: 10em;
+        width: 438px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}
+
+@media screen and (max-height: 645px){
+
+    .sound-board {
+        margin-top: 10em;
+        width: 100%;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 3em;
+    }
+}
+
