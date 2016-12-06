@@ -3,6 +3,12 @@ var playButtonList = document.querySelectorAll(".play-button"); //Grab all play 
 var sliderList = document.querySelectorAll(".slider"); // Grab all sliders
 var images = []; // Don't need to use this, it is just for pre-loading images
 
+/* TODO:
+    - Fix play/pause DOM exception
+    - Fix GET https://kozysounds.com/audio/rain.m4a net::ERR_CONNECTION_RESET /audio/rain.m4a:1
+    - Crossfade audio to remove noticeable cutoff
+*/
+
 // Preloads images
 function preloadImages() {
     for (var i = 0; i < arguments.length; i++) {
@@ -53,6 +59,7 @@ function unHighlightPauseButton() {
 function play() {
     var audio = this.parentNode.getElementsByClassName("audio-file")[0];
     var button = this.parentNode.getElementsByClassName("play-button")[0];
+    audio.load();
     audio.play();
     this.src = "./img/pause.png"; // Swap to pause image
     button.className = "pause-button";
