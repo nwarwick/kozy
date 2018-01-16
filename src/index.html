@@ -4,10 +4,11 @@
 <head>
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'>
     <title>Kozy</title>
-    <link href="https://bootswatch.com/sandstone/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
-    <link href="css/nouislider.css" rel="stylesheet">
-    <link href="css/index.css" type="text/css" rel="stylesheet">
+    <link href="./css/nouislider.css" rel="stylesheet">
+    <link href="./css/index.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,14 +18,14 @@
         <hr id="title-underline">
         <p id="title-note">Work | Study | Focus</p>
     </div>
-    
+
     <div class="sound-board">
         <div class="sb-row">
             <span class="audio-block">
                 <img name="test" class="play-button" src="img/play.png">
                 <div class="slider" id="rain-slider"></div>
                 <h2>Rain</h2>
-                <audio class="audio-file" id="rain" src="audio/rain.m4a" loop></audio>         
+                <audio class="audio-file" id="rain" src="audio/rain.m4a" loop></audio>
             </span>
             <span class="audio-block">
                 <img class="play-button" src="img/play.png">
@@ -38,7 +39,7 @@
                 <img class="play-button" src="img/play.png">
                 <div class="slider" id="waves-slider"></div>
                 <h2>Waves</h2>
-                <audio class ="audio-file" id="waves" loop>
+                <audio class="audio-file" id="waves" loop>
                     <source src="audio/waves.m4a" type="audio/mp4">
                 </audio>
             </span>
@@ -46,7 +47,7 @@
                 <img class="play-button" src="img/play.png">
                 <div class="slider" id="cafe-slider"></div>
                 <h2>Cafe</h2>
-                <audio class ="audio-file" id="cafe" loop>
+                <audio class="audio-file" id="cafe" loop>
                     <source src="audio/cafe.m4a" type="audio/mp4">
                 </audio>
             </span>
@@ -54,7 +55,7 @@
                 <img class="play-button" src="img/play.png">
                 <div class="slider" id="jungle-slider"></div>
                 <h2>Jungle</h2>
-                <audio class ="audio-file" id="jungle" loop>
+                <audio class="audio-file" id="jungle" loop>
                     <source src="audio/jungle.m4a" type="audio/mp4">
                 </audio>
             </span>
@@ -62,14 +63,14 @@
                 <img class="play-button" src="img/play.png">
                 <div class="slider" id="thunder-slider"></div>
                 <h2>Thunder</h2>
-                <audio class ="audio-file" id="thunder" loop>
+                <audio class="audio-file" id="thunder" loop>
                     <source src="audio/thunder.m4a" type="audio/mp4">
                 </audio>
             </span>
         </div>
     </div>
     <div class="footer">
-        <a target="_blank" href="https://kozysounds.com/sources.html">Audio Sources</a> 
+        <a target="_blank" href="https://kozysounds.com/sources.html">Audio Sources</a>
         <span id="divider">|</span>
         <a target="_blank" href="http://newtopwallpapers.com/wp-content/uploads/2013/04/Rain-Falling-on-Trees.jpeg">Background Source</a>
     </div>
@@ -78,31 +79,31 @@
     <script src="js/index.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
     <script>
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyB4VfSNdZNfxMsIQtiNGbCeABfkojzeVGY",
-        authDomain: "kozy-741a0.firebaseapp.com",
-        databaseURL: "https://kozy-741a0.firebaseio.com",
-        storageBucket: "kozy-741a0.appspot.com",
-        messagingSenderId: "956185114959"
-    };
-    firebase.initializeApp(config);
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB4VfSNdZNfxMsIQtiNGbCeABfkojzeVGY",
+            authDomain: "kozy-741a0.firebaseapp.com",
+            databaseURL: "https://kozy-741a0.firebaseio.com",
+            storageBucket: "kozy-741a0.appspot.com",
+            messagingSenderId: "956185114959"
+        };
+        firebase.initializeApp(config);
     </script>
     <script>
-    (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function() {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-    ga('create', 'UA-87075310-1', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-87075310-1', 'auto');
+        ga('send', 'pageview');
     </script>
 </body>
 
