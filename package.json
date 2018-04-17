@@ -1,0 +1,29 @@
+{
+  "name": "kozy",
+  "version": "1.0.0",
+  "description": "Ambient sound app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwarwick/kozy.git"
+  },
+  "author": "Nick Warwick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nwarwick/kozy/issues"
+  },
+  "homepage": "https://github.com/nwarwick/kozy#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-solid": "^5.0.10",
+    "@fortawesome/fontawesome-pro-light": "^5.0.10",
+    "@fortawesome/fontawesome-pro-solid": "^5.0.10",
+    "nouislider": "^11.1.0"
+  }
+}
