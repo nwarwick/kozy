@@ -2,3 +2,5 @@
 .firebaserc
 firebase.json
 node_modules/
+.cache
+dist/
