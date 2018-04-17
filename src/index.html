@@ -3,16 +3,14 @@
 
 <head>
     <link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico'>
+    <meta name="author" content="Nick Warwick">
+    <meta name="description" content="Kozy is a simple, lightweight, ambient sound web app. You can listen to the soothing sounds of rain, fire, waves, thunder, the jungle, and a busy cafe.">
     <title>Kozy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400" rel="stylesheet">
-    <link href="./css/nouislider.css" rel="stylesheet">
-    <link href="./css/index.css" type="text/css" rel="stylesheet">
 </head>
 
-<body>
-    <div class="header"></div>
+<body id="main">
     <div class="title-section">
         <h1 id="title">Kozy</h1>
         <hr id="title-underline">
@@ -21,62 +19,83 @@
 
     <div class="sound-board">
         <div class="sb-row">
-            <span class="audio-block">
-                <img name="test" class="play-button" src="img/play.png">
+            <div class="audio-block">
+                <a class="play-button">
+                    <i class="empty fal fa-play fa-4x"></i>
+                    <i class="solid fas fa-play fa-4x"></i>
+                </a>
                 <div class="slider" id="rain-slider"></div>
-                <h2>Rain</h2>
+                <p>Rain</p>
                 <audio class="audio-file" id="rain" src="audio/rain.m4a" loop></audio>
-            </span>
-            <span class="audio-block">
-                <img class="play-button" src="img/play.png">
+            </div>
+            <div class="audio-block">
+                <a class="play-button">
+                    <i class="empty fal fa-play fa-4x"></i>
+                    <i class="solid fas fa-play fa-4x"></i>
+                </a>
                 <div class="slider" id="fire-slider"></div>
-                <h2>Fire</h2>
+                <p>Fire</p>
                 <audio class="audio-file" id="fire" loop>
                     <source src="audio/fire.m4a" type="audio/mp4">
                 </audio>
-            </span>
-            <span class="audio-block">
-                <img class="play-button" src="img/play.png">
+            </div>
+            <div class="audio-block">
+                <a class="play-button">
+                    <i class="empty fal fa-play fa-4x"></i>
+                    <i class="solid fas fa-play fa-4x"></i>
+                </a>
                 <div class="slider" id="waves-slider"></div>
-                <h2>Waves</h2>
+                <p>Waves</p>
                 <audio class="audio-file" id="waves" loop>
                     <source src="audio/waves.m4a" type="audio/mp4">
                 </audio>
-            </span>
-            <span class="audio-block">
-                <img class="play-button" src="img/play.png">
+            </div>
+
+        </div>
+        <div class="sb-row">
+            <div class="audio-block">
+                <a class="play-button">
+                    <i class="empty fal fa-play fa-4x"></i>
+                    <i class="solid fas fa-play fa-4x"></i>
+                </a>
                 <div class="slider" id="cafe-slider"></div>
-                <h2>Cafe</h2>
+                <p>Cafe</p>
                 <audio class="audio-file" id="cafe" loop>
                     <source src="audio/cafe.m4a" type="audio/mp4">
                 </audio>
-            </span>
-            <span class="audio-block">
-                <img class="play-button" src="img/play.png">
+            </div>
+            <div class="audio-block">
+                <a class="play-button">
+                    <i class="empty fal fa-play fa-4x"></i>
+                    <i class="solid fas fa-play fa-4x"></i>
+                </a>
+
                 <div class="slider" id="jungle-slider"></div>
-                <h2>Jungle</h2>
+                <p>Jungle</p>
                 <audio class="audio-file" id="jungle" loop>
                     <source src="audio/jungle.m4a" type="audio/mp4">
                 </audio>
-            </span>
-            <span class="audio-block">
-                <img class="play-button" src="img/play.png">
+            </div>
+            <div class="audio-block">
+                <a class="play-button">
+                    <i class="empty fal fa-play fa-4x"></i>
+                    <i class="solid fas fa-play fa-4x"></i>
+                </a>
                 <div class="slider" id="thunder-slider"></div>
-                <h2>Thunder</h2>
+                <p>Thunder</p>
                 <audio class="audio-file" id="thunder" loop>
                     <source src="audio/thunder.m4a" type="audio/mp4">
                 </audio>
-            </span>
+            </div>
         </div>
     </div>
-    <div class="footer">
-        <a target="_blank" href="https://kozysounds.com/sources.html">Audio Sources</a>
-        <span id="divider">|</span>
-        <a target="_blank" href="http://newtopwallpapers.com/wp-content/uploads/2013/04/Rain-Falling-on-Trees.jpeg">Background Source</a>
-    </div>
+    <footer>
+        <a target="_blank" href="https://kozy-741a0.firebaseapp.com/sources.html">Audio Sources</a>
+    </footer>
     <!-- Scripts-->
-    <script src="js/nouislider.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="index.js"></script>
+    <!-- <script src="js/nouislider.min.js"></script> -->
+    <!-- <script src="js/index.js"></script> -->
     <script src="https://www.gstatic.com/firebasejs/3.5.2/firebase-app.js"></script>
     <script>
         // Initialize Firebase
