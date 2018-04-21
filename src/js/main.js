@@ -6,7 +6,6 @@ let noUiSlider = require('nouislider');
 //-----------------------Button stuff----------------------------
 
 function enablePlayButtons(playButtonList) {
-    //console.log("Play button list: " + playButtonList);
     for (var i = 0; i < playButtonList.length; i++) {
         playButtonList[i].addEventListener("click", playPause, false);
     }
@@ -24,7 +23,6 @@ function playPause() {
         button.childNodes[3].nextSibling.classList.remove('fa-play')
         button.childNodes[3].nextSibling.classList.add('fa-pause')
     } else {
-        console.log('pausing')
         audio.pause();
         button.childNodes[0].nextSibling.classList.remove('fa-pause')
         button.childNodes[0].nextSibling.classList.add('fa-play')
