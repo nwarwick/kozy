@@ -1,16 +1,7 @@
 var audioList = document.querySelectorAll(".audio-file"); // Grab all audio elements
 var playButtonList = document.querySelectorAll(".play-button"); //Grab all play buttons
 var sliderList = document.querySelectorAll(".slider"); // Grab all sliders
-var images = []; // Don't need to use this, it is just for pre-loading images
 let noUiSlider = require('nouislider');
-
-// Preloads images
-function preloadImages() {
-    for (var i = 0; i < arguments.length; i++) {
-        images[i] = new Image();
-        images[i].src = preloadImages.arguments[i];
-    }
-}
 
 //-----------------------Button stuff----------------------------
 
@@ -20,13 +11,6 @@ function enablePlayButtons(playButtonList) {
         playButtonList[i].addEventListener("click", playPause, false);
     }
 
-}
-
-function enablePauseButtons(pauseButtonList) {
-    //console.log("Pause button list: " + pauseButtonList);
-    for (var i = 0; i < pauseButtonList.length; i++) {
-        pauseButtonList[i].addEventListener("click", pause, false);
-    }
 }
 
 function playPause() {
