@@ -4,7 +4,7 @@
   "description": "Ambient sound app",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/index.html",
+    "start": "parcel ./src/index.html",
     "build": "parcel build ./src/index.html"
   },
   "repository": {
@@ -18,13 +18,14 @@
   },
   "homepage": "https://github.com/nwarwick/kozy#readme",
   "devDependencies": {
-    "node-sass": "^4.8.3"
+    "node-sass": "^4.9.0",
+    "parcel": "^1.8.1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.5",
-    "@fortawesome/fontawesome-free-solid": "^5.0.10",
-    "@fortawesome/fontawesome-pro-light": "^5.0.10",
-    "@fortawesome/fontawesome-pro-solid": "^5.0.10",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/fontawesome-pro-light": "^5.0.13",
+    "@fortawesome/fontawesome-pro-solid": "^5.0.13",
     "nouislider": "^11.1.0"
   }
 }
