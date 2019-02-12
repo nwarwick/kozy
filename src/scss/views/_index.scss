@@ -1,6 +1,7 @@
 html {
   height: 100%;
   font-family: 'Nunito', sans-serif;
+  color: $text-white;
 }
 
 #main {
@@ -13,29 +14,32 @@ html {
   background-attachment: fixed;
 
   footer {
-    color: #d3d6d6;
     text-align: center;
   }
+
   footer a {
     color: $text-white;
     font-size: 1.5em;
     text-decoration: none;
   }
+
   a:hover {
     text-decoration: underline;
   }
   a:visited {
     color: $text-white;
   }
+
   .title-section {
-    color: $text-white;
     text-align: center;
   }
+
   .title-section h1 {
-    font-weight: 100;
+    font-weight: normal;
     font-size: 8em;
-    margin-top: 20px;
+    margin: 0;
   }
+
   .sound-board {
     display: flex;
     flex-wrap: wrap;
@@ -52,39 +56,40 @@ html {
       position: relative;
 
       .play-button {
-        color: $text-white;
         .solid {
           display: none;
         }
+
         .empty {
           display: inline;
         }
       }
       .play-button:hover {
         cursor: pointer;
+
         .solid {
           display: inline;
         }
+
         .empty {
           display: none;
         }
       }
       .pause-button {
         font-size: 80px;
-        color: $text-white;
       }
+
       .pause-button:hover {
         cursor: pointer;
+
         .solid {
           display: inline;
         }
+
         .empty {
           display: none;
         }
       }
-    }
-    .audio-block h2 {
-      margin-top: 10px;
     }
     /* Not sure if I shold put this here or in nouislider.css */
     .slider {
@@ -93,8 +98,8 @@ html {
       width: 70px;
     }
   }
+
   .sound-board p {
-    color: $text-white;
     font-size: 1.5em;
     margin-bottom: 0;
   }
