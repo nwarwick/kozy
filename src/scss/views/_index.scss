@@ -4,6 +4,11 @@ html {
   color: $text-white;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 #main {
   background-image: linear-gradient(25deg, #00446b, #16707e, #199f90, #00d1a1);
   background-repeat: no-repeat;
@@ -12,6 +17,7 @@ html {
   display: flex;
   flex-direction: column;
   background-attachment: fixed;
+  flex: 1;
 
   footer {
     text-align: center;
@@ -43,12 +49,12 @@ html {
   .sound-board {
     display: flex;
     flex-wrap: wrap;
+    padding: 40px 0;
     flex: 1;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     align-items: center;
-    min-height: 500px;
 
     .audio-block {
       text-align: center;
