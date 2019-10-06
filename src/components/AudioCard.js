@@ -9,6 +9,7 @@ export default function AudioCard({ source, label }) {
   const [audio] = useState(new Audio(source))
   const [isPlaying, setIsPlaying] = useState(false)
 
+  // Only run upon mounting
   useEffect(
     () => {
       audio.volume = DEFAULT_VOLUME
