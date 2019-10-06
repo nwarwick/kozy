@@ -1,3 +1,9 @@
 .audio-card {
   // width: 80px;
+  @include flex-center(true);
+
+  button {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
 }

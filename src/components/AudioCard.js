@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 
 export default function AudioCard({ source, label }) {
   const [audio] = useState(new Audio(source))
@@ -14,7 +16,6 @@ export default function AudioCard({ source, label }) {
   }
 
   function handleClick(e) {
-    e.preventDefault()
     setIsPlaying(!isPlaying)
     toggleAudio()
   }
@@ -22,11 +23,14 @@ export default function AudioCard({ source, label }) {
   return (
     <div className='audio-card'>
       <div>
-        <button onClick={e => handleClick(e)}>
-          {isPlaying ? 'Stop' : 'Play'}
+        <button className='btn btn-blank' onClick={e => handleClick(e)}>
+          {isPlaying ? (
+            <FontAwesomeIcon icon={faPause} />
+          ) : (
+            <FontAwesomeIcon icon={faPlay} />
+          )}
         </button>
       </div>
-      <div>slider</div>
       {label}
     </div>
   )
