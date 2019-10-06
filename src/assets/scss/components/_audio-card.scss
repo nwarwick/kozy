@@ -1,9 +1,83 @@
 .audio-card {
-  // width: 80px;
   @include flex-center(true);
+  width: 60px;
+  height: 120px;
+  font-size: 1.2rem;
+  margin: 20px;
 
   button {
-    font-size: 2rem;
+    font-size: 1.5em;
     margin-bottom: 10px;
+  }
+
+  &,
+  button {
+    transition: color 0.2s;
+  }
+
+  &.active.jungle {
+    &,
+    button {
+      color: #9bff8e;
+    }
+  }
+
+  &.active.fire {
+    &,
+    button {
+      color: #ff8484;
+
+      &:hover {
+        color: #e67e7e;
+      }
+
+      &:active {
+        color: #cf7676;
+      }
+    }
+  }
+
+  &.active.rain {
+    &,
+    button {
+      color: #87beff;
+    }
+  }
+
+  &.active.cafe {
+    &,
+    button {
+      color: #ffcaad;
+
+      &:hover {
+        color: #eebda2;
+      }
+
+      &:active {
+        color: #daad94;
+      }
+    }
+  }
+
+  &.active.thunder {
+    &,
+    button {
+      color: #aaa1ff;
+
+      &:hover {
+        color: #9a92e4;
+      }
+
+      &:active {
+        color: #8a82ca;
+      }
+    }
+  }
+
+  &.active.waves {
+    &,
+    button {
+      color: #4dffe6;
+    }
   }
 }

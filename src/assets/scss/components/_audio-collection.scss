@@ -1,5 +1,7 @@
 .audio-collection {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(80px, 1fr));
-  grid-gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
