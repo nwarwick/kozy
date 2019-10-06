@@ -1,3 +1,23 @@
+@mixin audio-active($default, $hover, $pressed) {
+  &,
+  button {
+    color: $default;
+  }
+
+  button:hover {
+    color: $hover;
+  }
+
+  button:active {
+    color: $pressed;
+  }
+
+  .rc-slider-handle,
+  .rc-slider-track {
+    background-color: $default;
+  }
+}
+
 .audio-card {
   @include flex-center(true);
   width: 60px;
@@ -7,7 +27,6 @@
 
   button {
     font-size: 1.5em;
-    margin-bottom: 10px;
   }
 
   &,
@@ -16,68 +35,43 @@
   }
 
   &.active.jungle {
-    &,
-    button {
-      color: #9bff8e;
-    }
+    @include audio-active(#9bff8e, #92f086, #87dd7c);
   }
 
   &.active.fire {
-    &,
-    button {
-      color: #ff8484;
-
-      &:hover {
-        color: #e67e7e;
-      }
-
-      &:active {
-        color: #cf7676;
-      }
-    }
+    @include audio-active(#ff8484, #e67e7e, #cf7676);
   }
 
   &.active.rain {
-    &,
-    button {
-      color: #87beff;
-    }
+    @include audio-active(#87beff, #7badeb, #719fd8);
   }
 
   &.active.cafe {
-    &,
-    button {
-      color: #ffcaad;
-
-      &:hover {
-        color: #eebda2;
-      }
-
-      &:active {
-        color: #daad94;
-      }
-    }
+    @include audio-active(#ffcaad, #eebda2, #daad94);
   }
 
   &.active.thunder {
-    &,
-    button {
-      color: #aaa1ff;
-
-      &:hover {
-        color: #9a92e4;
-      }
-
-      &:active {
-        color: #8a82ca;
-      }
-    }
+    @include audio-active(#aaa1ff, #a098ec, #958dda);
   }
 
   &.active.waves {
-    &,
-    button {
-      color: #4dffe6;
-    }
+    @include audio-active(#4dffe6, #47eed8, #46dfca);
+  }
+
+  // Slider overrides
+  .rc-slider {
+    margin: 5px 0;
+  }
+
+  .rc-slider-handle {
+    border: 0;
+  }
+
+  .rc-slider-rail {
+    background-color: #ffffff54;
+  }
+
+  .rc-slider-track {
+    background-color: $base-white;
   }
 }
