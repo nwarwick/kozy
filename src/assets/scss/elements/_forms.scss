@@ -1,0 +1,39 @@
+.form {
+  display: grid;
+  grid-gap: 20px;
+
+  label {
+    font-weight: bold;
+    align-self: center;
+  }
+
+  input {
+    margin-top: 5px;
+  }
+
+  label.textarea-label {
+    align-self: flex-start;
+    padding-top: 0.5rem;
+  }
+
+  .form-footer {
+    margin-top: 20px;
+  }
+
+  .form-group {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .form-row-double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+}
+
+.form-inline .form-row {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+  grid-gap: 20px;
+}

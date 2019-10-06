@@ -1,0 +1,29 @@
+//Vendor
+
+// Settings
+@import 'settings/colours';
+@import 'settings/fonts';
+@import 'settings/typography';
+@import 'settings/layout';
+@import 'settings/utility';
+@import 'settings/breakpoints';
+@import 'settings/global';
+@import 'settings/borders';
+
+// Elements
+@import 'elements/images';
+@import 'elements/buttons';
+@import 'elements/inputs';
+@import 'elements/links';
+@import 'elements/forms';
+
+// Pages
+@import 'pages/home';
+
+// Components
+@import 'components/footer';
+@import 'components/movie-finder';
+@import 'components/movie-card';
+
+// Components - Common
+@import 'components/common/loading';

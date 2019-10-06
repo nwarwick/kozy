@@ -1,0 +1,30 @@
+input {
+  border-radius: $border-radius-md;
+  width: 100%;
+  border: $border-grey-thin;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  color: $text-body;
+}
+
+.input-group {
+  display: flex;
+
+  input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+textarea {
+  border-radius: $border-radius-md;
+  width: 100%;
+  min-height: 47px;
+  border: $border-grey-thin;
+  padding: 1rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  resize: vertical;
+  color: $text-body;
+}

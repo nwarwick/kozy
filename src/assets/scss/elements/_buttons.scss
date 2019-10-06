@@ -1,0 +1,58 @@
+.btn {
+  @include selectable;
+  border-radius: $border-radius-md;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: none;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  outline: none;
+}
+
+.btn-primary {
+  background-color: $primary;
+  color: $text-body-white;
+
+  &:hover {
+    background-color: $primary-hover;
+    color: $text-body-white;
+  }
+
+  &:active {
+    background-color: $primary-pressed;
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary;
+  color: $text-body-white;
+
+  &:hover {
+    background-color: $secondary-hover;
+  }
+
+  &:active {
+    background-color: $secondary-pressed;
+  }
+}
+
+.btn-danger {
+  background-color: $danger;
+  color: $text-body-white;
+
+  &:hover {
+    background-color: $danger-hover;
+  }
+
+  &:active {
+    background-color: $danger-pressed;
+  }
+}
+
+.btn-input-right {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}

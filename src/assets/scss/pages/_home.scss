@@ -1,0 +1,13 @@
+.home {
+  @include flex-center(true);
+  height: 100%;
+
+  header {
+    @include flex-center;
+  }
+
+  span {
+    color: $primary;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,28 @@
+.movie-card {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  img {
+    border-radius: $border-radius-md;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .movie-card-info-section,
+  .movie-card-netflix-link {
+    margin: 5px 0;
+  }
+
+  @media (max-width: 450px) {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+}
