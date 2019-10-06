@@ -14,11 +14,11 @@
 
 .btn-primary {
   background-color: $primary;
-  color: $text-body-white;
+  color: $text-body;
 
   &:hover {
     background-color: $primary-hover;
-    color: $text-body-white;
+    color: $text-body;
   }
 
   &:active {
@@ -26,22 +26,22 @@
   }
 }
 
-.btn-secondary {
-  background-color: $secondary;
-  color: $text-body-white;
+.btn-blank {
+  background-color: transparent;
+  color: $base-white;
 
   &:hover {
-    background-color: $secondary-hover;
+    color: $base-white-hover
   }
 
   &:active {
-    background-color: $secondary-pressed;
+    color: $base-white-pressed;
   }
 }
 
 .btn-danger {
   background-color: $danger;
-  color: $text-body-white;
+  color: $text-body;
 
   &:hover {
     background-color: $danger-hover;
