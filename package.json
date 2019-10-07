@@ -1,31 +1,35 @@
 {
   "name": "kozy",
-  "version": "1.0.0",
-  "description": "Ambient sound app",
-  "main": "index.js",
-  "scripts": {
-    "dev": "parcel ./src/index.html",
-    "build": "parcel build ./src/index.html --public-url ./"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nwarwick/kozy.git"
-  },
-  "author": "Nick Warwick",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/nwarwick/kozy/issues"
-  },
-  "homepage": "https://github.com/nwarwick/kozy#readme",
-  "devDependencies": {
-    "cssnano": "^4.1.10",
-    "node-sass": "^4.9.0"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.8",
-    "@fortawesome/fontawesome-free-solid": "^5.0.13",
-    "@fortawesome/fontawesome-pro-light": "^5.0.13",
-    "@fortawesome/fontawesome-pro-solid": "^5.0.13",
-    "nouislider": "^11.1.0"
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
+    "rc-slider": "^8.7.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

@@ -1,0 +1,45 @@
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.container,
+.container-sm,
+.container-xs {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+.container-sm {
+  max-width: 600px;
+}
+
+.container-xs {
+  max-width: 300px;
+}
+
+@mixin flex-center($column: false) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @if $column == true {
+    flex-direction: column;
+  }
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}

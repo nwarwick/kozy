@@ -1,0 +1,82 @@
+@mixin audio-active($default, $hover, $pressed) {
+  &,
+  button {
+    color: $default;
+  }
+
+  button:hover {
+    color: $hover;
+  }
+
+  button:active {
+    color: $pressed;
+  }
+
+  .rc-slider-handle,
+  .rc-slider-track {
+    background-color: $default;
+  }
+}
+
+.audio-card {
+  @include flex-center(true);
+  width: 60px;
+  height: 120px;
+  font-size: 1.2rem;
+  margin: 20px;
+
+  button {
+    font-size: 1.5em;
+  }
+
+  &,
+  button {
+    transition: color 0.2s;
+  }
+
+  .rc-slider-track,
+  .rc-slider-handle {
+    transition: background 0.2s;
+  }
+
+  &.active.jungle {
+    @include audio-active(#9bff8e, #89e47d, #82d877);
+  }
+
+  &.active.fire {
+    @include audio-active(#ff8484, #e67e7e, #cf7676);
+  }
+
+  &.active.rain {
+    @include audio-active(#87beff, #7badeb, #719fd8);
+  }
+
+  &.active.cafe {
+    @include audio-active(#ffcaad, #eebda2, #daad94);
+  }
+
+  &.active.thunder {
+    @include audio-active(#aaa1ff, #a098ec, #958dda);
+  }
+
+  &.active.waves {
+    @include audio-active(#4dffe6, #47eed8, #46dfca);
+  }
+
+  // Slider overrides
+  .rc-slider {
+    margin: 5px 0;
+  }
+
+  .rc-slider-handle {
+    border: 0;
+  }
+
+  .rc-slider-rail {
+    background-color: #ffffff54;
+  }
+
+  .rc-slider-track {
+    background-color: $base-white;
+  }
+}
