@@ -6,4 +6,3 @@ Kozy is a simple, lightweight, ambient sound web app. You can listen to the soot
 
 In the project directory run: `yarn start`
 This will run the app on [http://localhost:3000](http://localhost:3000) (by default).
-
